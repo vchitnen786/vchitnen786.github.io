@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<title>Teaching Assistant Application Page</title>
+<link rel="stylesheet" href="css/teaching.css">
+<link rel="stylesheet" href="css/header.css">
+
+<img src="img\logo.jpg" alt="Logo" style="width:25%,height:25%"  
+<div><img src="img\dept_logo.jpg" alt="Logo" style="width:50%,height:25%" </div> 
+<br></br>
+<ul>
+  <li><a  href="index.html">Home</a></li>
+  <li><a href="program.html">Program Details</a></li>
+  <li><a class="active" href="#">Teaching Assistant</a></li>
+  <li style="float:left;">
+    <a href="gpa.html">GPA Calculator</a></li>
+</ul>
+
+
+
+<body>
+<div id="main">
+<form id="frm1" >
+  <h2> Teaching Assistant Application page</h2>
+  <div class="container">
+
+     
+  <label for="fname">Full Name</label>
+ 
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+ 
+
+  
+      <label for="sid">Student ID</label>
+      
+      <input type="text" id="sid" name="sid" placeholder="Student ID..">
+  
+      <label for="gpa">GPA</label>
+      <input type="text" id="gpa" name="gpa" placeholder="GPA..">
+
+      <label for="sdate">Submission Date</label>
+           <input type="date" id="sdate" name="sdate" placeholder="Submission Date..">
+     
+      <label for="gender">Gender</label>
+  
+      <select id="gender" name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+     
+      </select>
+
+            <label for="comments">Comments</label>
+      
+      <textarea id="comments" name="comments" placeholder="Write comments.." style="height:200px"></textarea>
+    
+</form> 
+</div>
+
+<button onclick="myFunction()">Submit Data</button>
+</div>
+  
+<div class="container">
+<p id="demo1"></p>
+
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+</div>
+<script>
+
+function myFunction() {
+
+  var v = document.getElementById("main");
+  if (v.style.display === "none") {
+         v.style.display = "block";
+      } else {
+         v.style.display = "none";
+      }
+
+  var x = document.getElementById("frm1");
+  var fname = x.elements[0].value;
+  var sid = x.elements[1].value;
+  var gpa = x.elements[2].value;
+  var sdate = x.elements[3].value;
+  var gender = x.elements[4].value;
+  var comments = x.elements[5].value;
+  
+ document.getElementById("demo1").innerHTML = "student Name: " + fname;
+
+  document.getElementById("demo2").innerHTML = " Student Id: " + sid;
+  document.getElementById("demo3").innerHTML = " GPA :" + gpa;
+  document.getElementById("demo4").innerHTML = "Submission Date:" + sdate;
+  document.getElementById("demo5").innerHTML = "Gender: " + gender;
+  document.getElementById("demo6").innerHTML = "Comments: " +comments;
+
+}
+</script>
+
+</body>
+<footer>
+  <p>Prepared By: Vinuthna Sai Chitneni<br>
+    <p>Contact: vchitnen@aum.edu<br>
+      <p>Copyright 2020-21 Vinne, All rights reserved<br>
+  </p>
+</footer>
+</html>

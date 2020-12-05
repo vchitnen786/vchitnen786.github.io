@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+              
+<title>GPA Calculator</title>
+<link rel="stylesheet" href="css/teaching.css">
+<link rel="stylesheet" href="css/header.css">
+
+<img src="img\logo.jpg" alt="Logo" style="width:25%,height:25%"  
+<div><img src="img\dept_logo.jpg" alt="Logo" style="width:50%,height:25%" </div> 
+<br></br>
+<ul>
+  <li><a  href="index.html">Home</a></li>
+  <li><a href="program.html">Program Details</a></li>
+  <li><a href="teaching.html">Teaching Assistant</a></li>
+  <li style="float:left;">
+    <a href="#" class="active">GPA Calculator</a></li>
+</ul>
+
+<body>
+<div id="main">
+<form id="frm1" >
+  <h2> GPA Calculator</h2>
+  <div class="container">
+    
+  <label for="subject1">Subject 1 Name:</label>
+
+      <input type="text" id="s1" name="s1" placeholder="Subject 1 Name" required="Place value">
+ 
+        <label for="s1grade">Subject 1 Grade:</label>
+ 
+      <input type="text" id="s1grade" name="s1grade" placeholder="Subject 1 Grade">
+
+
+  <label for="creditHour1">Subject 1 Credit Hour:</label>
+ 
+      <input type="text" id="c1" name="c1" placeholder="Subject 1 Credit Hour">
+
+
+  <label for="subject2">Subject 2 Name:</label>
+ 
+      <input type="text" id="s2" name="s2" placeholder="Subject 2 Name">
+
+<label for="s2grade">Subject 2 Grade:</label>
+ 
+      <input type="text" id="s2grade" name="s2grade" placeholder="Subject 2 Grade">
+
+
+  <label for="creditHour2">Subject 2 Credit Hour:</label>
+ 
+      <input type="text" id="c2" name="c2" placeholder="Subject 2 Credit Hour">
+
+
+      
+</form> 
+</div>
+<div style="background-color: #k3k3k3;">
+<button onclick="myFunction()">Calculate GPA</button>
+</div>
+</div>
+  
+<div style="background-color: #k3k3k3;">
+
+  <p id="sucess"></p></div>
+ 
+<div class="container">
+<p id="demo1"></p>
+
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+
+</div>
+<script>
+
+function myFunction() {
+
+  var v = document.getElementById("main");
+  if (v.style.display === "none") {
+         v.style.display = "block";
+      } else {
+         v.style.display = "none";
+      }
+
+  var x = document.getElementById("frm1");
+  var s1name = x.elements[0].value;
+  var s1grade = x.elements[1].value;
+  var s1credit = parseInt(x.elements[2].value);
+  var s2name = x.elements[3].value;
+  var s2grade = x.elements[4].value;
+  var s2credit = parseInt(x.elements[5].value);
+
+  
+  var total_credit = s1credit + s2credit;
+
+
+  var s1grade_value;
+  if(s1grade == 'A'){
+    s1grade_value = 4;
+
+  }else if (s1grade=='B') {s1grade_value = 3;}
+  else if (s1grade=='C') {s1grade_value = 2;}
+  else if (s1grade=='D') {s1grade_value = 1;}
+  else if (s1grade=='F') {s1grade_value = 0;}
+
+var s2grade_value;
+    if(s2grade == 'A'){
+    s2grade_value = 4;
+
+  }else if (s2grade=='B') {s2grade_value = 3;}
+else if (s2grade=='C') {s2grade_value = 2;}
+  else if (s2grade=='D') {s2grade_value = 1;}
+  else if (s2grade=='F') {s2grade_value = 0;}
+
+
+    
+    var total_grade = s1grade_value+s2grade_value;
+
+    var s1data = (s1credit * s1grade_value);
+    var s2data = (s2credit * s2grade_value);
+    var GPA= (s1data + s2data) /  (total_credit);
+    
+
+
+  document.getElementById("demo1").innerHTML = "Subject 1: " + s1name;
+  document.getElementById("demo2").innerHTML = "Subject 1 Grade: " + s1grade;
+  document.getElementById("demo3").innerHTML = "Subject 1 Credit: " + s1credit;
+
+  document.getElementById("demo4").innerHTML = "Subject 2: " + s2name;
+  document.getElementById("demo5").innerHTML = "Subject 2 Grade: " + s2grade;
+document.getElementById("demo6").innerHTML = "Subject 2 Credit: " + s2credit;
+
+ document.getElementById("demo7").innerHTML = "GPA: " + GPA;
+
+ document.getElementById("sucess").innerHTML = "You have submitted sucessfully. ";
+
+
+}
+</script>
+
+</body>
+<footer>
+  <p>Prepared By: Vinuthna Sai Chitneni<br>
+    <p>Contact: vchitnen@aum.edu<br>
+      <p>Copyright 2020-21 Vinne, All rights reserved<br>
+  </p>
+</footer>
+</html>

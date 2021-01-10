@@ -1,0 +1,46 @@
+<!---------secondpage________>
+.box_two{
+    width:26.875em;
+     border: 2px solid black;
+     margin: 0em;
+     padding-left: 1.875em;
+     background-color: white;
+     display: flex;
+}
+.box_two_one{
+    width: 18.75em;
+}
+.box_two_two{
+    padding-top: 3.75em;
+    padding-right: 1.25em;
+}
+.box_five{
+    width: 13.75em;
+    background-color: #fbe4a3a8;
+    margin: 0px;
+    padding-right: 1.875em;
+    padding-left: 1.875em;
+}
+
+.box_seven h4{
+  text-align: center;
+font-size: 187.5%;
+ }
+.box_seven table{
+    display:table;
+    width:400px;
+	border-spacing: 0px;
+    padding-bottom: 1.25em;
+}
+th td{
+    margin: none;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+th{
+	text-align:left;
+	color: grey;
+}
+.col3 {
+	background-color: #fbe4a3a8;
+}
